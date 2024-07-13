@@ -1,3 +1,5 @@
+-- Create a function to safely divide two numbers
+-- If the second number is zero, return 0
 DELIMITER //
 DROP FUNCTION IF EXISTS SafeDiv;
 CREATE FUNCTION SafeDiv(a INT, b INT)
