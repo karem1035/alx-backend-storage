@@ -4,7 +4,7 @@ import uuid
 from typing import Union
 
 
-class Cashe:
+class Cache:
     ''' Class Cashe '''
 
     def __init__(self) -> None:
@@ -14,5 +14,6 @@ class Cashe:
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         ''' Store the data with a key'''
-        key = uuid.uuid4()
+        key = str(uuid.uuid4())
         self._redis.set(key, data)
+        return key
