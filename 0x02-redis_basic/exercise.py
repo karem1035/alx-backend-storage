@@ -18,7 +18,6 @@ class Cache:
         self._redis.set(key, data)
         return key
 
-    @property
     def get(self, key: str, fn: Optional[Callable[[any], any]] = None) -> any:
         '''recovering original type'''
         value = self._redis.get(key)
